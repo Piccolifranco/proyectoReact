@@ -1,7 +1,9 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import Carrito from "../Carrito/Carrito";
-import "./nabvar.css";
+import "./navbar.css";
 
-const Nabvar = () => {
+const Navbar = () => {
   return (
     <nav className="navbar">
       <img
@@ -12,16 +14,16 @@ const Nabvar = () => {
 
       <ul className="barra">
         <li>
-          <button>Inicio</button>
+          <Link to="/">Inicio</Link>
         </li>
         <li>
-          <button>Black friday</button>
+          <Link to="tienda">Black friday</Link>
         </li>
         <li>
-          <button>Temporada 2022</button>
+          <Link to="tienda">Temporada 2022</Link>
         </li>
         <li>
-          <button>Contacto</button>
+          <Link to="contacto">Contacto</Link>
         </li>
       </ul>
 
@@ -30,4 +32,4 @@ const Nabvar = () => {
   );
 };
 
-export default Nabvar;
+export default Navbar;
