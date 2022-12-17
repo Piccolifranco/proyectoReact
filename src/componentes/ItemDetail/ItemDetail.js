@@ -1,6 +1,7 @@
 import React from "react";
+import Item from "../Item/Item";
 
-const Item = ({ item }) => {
+const ItemDetailed = ({ item }) => {
   return (
     <div>
       <img src={item.img} alt="item" />
@@ -11,4 +12,4 @@ const Item = ({ item }) => {
   );
 };
 
-export default Item;
+export default ItemDetailed;

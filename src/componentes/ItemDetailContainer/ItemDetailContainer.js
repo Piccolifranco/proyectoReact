@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { getItems } from "../ItemListContainer/ItemListContainer";
 
-const ItemDetailContainer = () => {
-  const [products, setProducts] = useState();
-
-  useEffect(() => {
-    const promesa = new Promise((resolve) => {
-      setTimeout(() => setProducts([1, 2, 3, 4]), 2000);
-    }).then((res) => setProducts(res));
-  }, [products]);
+const ItemDetailContainer = ({ id }) => {
+  const itemDetailed = getItems().then((response) => {
+    return response.find((item) => item.id === id);
+  });
 
   return <div>ItemDetailContainer</div>;
 };

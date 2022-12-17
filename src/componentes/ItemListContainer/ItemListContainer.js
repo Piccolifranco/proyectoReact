@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemList from "../ItemList/ItemList";
 
 const items = [
@@ -40,8 +40,21 @@ const items = [
   },
 ];
 
+export function getItems() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(items);
+    }, 2000);
+  });
+}
+
 const ItemListContainer = () => {
-  return <ItemList items={items} />;
+  const [itemList, setItemList] = useState([]);
+
+  getItems().then((response) => {
+    setItemList(response);
+  });
+  return <ItemList items={itemList} />;
 };
 
 export default ItemListContainer;
