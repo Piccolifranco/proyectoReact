@@ -1,15 +1,21 @@
 import React from "react";
-import Item from "../Item/Item";
+import ItemCount from "../Item/ItemCount";
 
-const ItemDetailed = ({ item }) => {
+function ItemDetail({ itemDetailed }) {
+  console.log(itemDetailed);
   return (
     <div>
-      <img src={item.img} alt="item" />
-      <h5>{item.nombre}</h5>
-      <p>Precio: ${item.precio}</p>
-      <button>Agregar al carrito</button>
+      {itemDetailed && (
+        <>
+          <img src={itemDetailed.img} alt="item" />
+          <h5>{itemDetailed.nombre}</h5>
+          <p>Precio: ${itemDetailed.precio}</p>
+          <button>Agregar al carrito</button>
+          <ItemCount />
+        </>
+      )}
     </div>
   );
-};
+}
 
-export default ItemDetailed;
+export default ItemDetail;

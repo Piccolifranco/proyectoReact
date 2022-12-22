@@ -17,13 +17,13 @@ const Navbar = () => {
           <Link to="/">Inicio</Link>
         </li>
         <li>
-          <Link to="tienda">Black friday</Link>
+          <Link to="/">Black friday</Link>
         </li>
         <li>
-          <Link to="tienda">Temporada 2022</Link>
+          <Link to="/">Descubri tu producto estrella</Link>
         </li>
         <li>
-          <Link to="contacto">Contacto</Link>
+          <Link to="/">Contacto</Link>
         </li>
       </ul>
 

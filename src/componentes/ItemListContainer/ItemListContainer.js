@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import ItemList from "../ItemList/ItemList";
 
-const items = [
+export const items = [
   {
     id: 1,
     nombre: "remera logo 2G",
     precio: 3500,
-    img: "../images/remeralogo.jpg",
+    img: "../../../assets/remeralogo.jpg",
   },
   {
     id: 2,

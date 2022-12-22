@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import { getItems } from "../ItemListContainer/ItemListContainer";
 
-const ItemDetailContainer = ({ id }) => {
-  const itemDetailed = getItems().then((response) => {
-    return response.find((item) => item.id === id);
-  });
+const ItemDetailContainer = () => {
+  const { id } = useParams();
 
-  return <div>ItemDetailContainer</div>;
+  const [item, setItem] = useState({});
+
+  useEffect(() => {
+    if (id) {
+      getItems().then((items) => {
+        const foundItem = items.find((item) => {
+          return item.id.toString() === id;
+        });
+        setItem(foundItem);
+      });
+    }
+  }, [id]);
+
+  return <ItemDetail itemDetailed={item} />;
 };
 
 export default ItemDetailContainer;
