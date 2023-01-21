@@ -7,12 +7,19 @@ const Item = ({ item }) => {
     navigate(`/item/${item.id}`);
   };
   return (
-    <div onClick={handleClick}>
-      <img src={item.img} alt="item" />
-      <h5>{item.nombre}</h5>
-      <p>Precio: ${item.precio}</p>
-      <button>Agregar al carrito</button>
-    </div>
+    <>
+      <div onClick={handleClick}>
+        <img
+          style={{ objectFit: "contain" }}
+          width={200}
+          height={200}
+          src={item.img}
+          alt="item"
+        />
+        <h5>{item.nombre}</h5>
+        <p>Precio: ${item.precio}</p>
+      </div>
+    </>
   );
 };
 
