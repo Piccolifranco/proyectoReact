@@ -1,14 +1,12 @@
 import React from "react";
-import { items } from "../ItemListContainer/ItemListContainer";
 
-const ItemCount = ({ onAdd, value }) => {
-  const onAddhandler = () => {
-    const itemCounter = items.reduce((id, items) => id + 1, 0);
-  };
-
+const ItemCount = ({ onAdd, onDelete, count }) => {
   return (
     <div>
-      <button onAdd={onAddhandler}> Items en el carrito: {itemCounter}</button>
+      <button onClick={onAdd}> Agregar al carrito </button>
+      <button disabled={count <= 0} onClick={onDelete}>
+        Eliminar del carrito
+      </button>
     </div>
   );
 };
