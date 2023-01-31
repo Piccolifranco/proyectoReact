@@ -16,8 +16,9 @@ const Item = ({ item }) => {
           src={item.img}
           alt="item"
         />
-        <h5>{item.nombre}</h5>
+        <h5>{item.title}</h5>
         <p>Precio: ${item.precio}</p>
+        <p>Stock: {item.stock}</p>
       </div>
     </>
   );
