@@ -24,7 +24,13 @@ function ItemDetail({ itemDetailed }) {
     <div>
       {itemDetailed && (
         <>
-          <img src={itemDetailed.img} alt="item" />
+          <img
+            style={{ objectFit: "contain" }}
+            width={200}
+            height={200}
+            src={itemDetailed.img}
+            alt="item"
+          />
           <h1>{itemDetailed.nombre}</h1>
           <h3>Cantidad: {count}</h3>
           <p>Precio: ${itemDetailed.precio}</p>

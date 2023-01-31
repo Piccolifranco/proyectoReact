@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-
 import Navbar from "./componentes/Navbar/Navbar";
-import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
 import { CarritoList } from "./componentes/CarritoList/CarritoList";
 import ItemListContainer2 from "./componentes/ItemListContainer/ItemListContainer2";
@@ -66,7 +64,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<ItemListContainer />} />
+          <Route exact path="/" element={<ItemListContainer2 />} />
           <Route exact path="/Item/:id" element={<ItemDetailContainer />} />
           <Route exact path="/Carrito" element={<CarritoList />} />
         </Routes>
