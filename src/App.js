@@ -6,6 +6,7 @@ import Navbar from "./componentes/Navbar/Navbar";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
 import { CarritoList } from "./componentes/CarritoList/CarritoList";
+import ItemListContainer2 from "./componentes/ItemListContainer/ItemListContainer2";
 
 export const CartContext = React.createContext();
 
